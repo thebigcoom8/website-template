@@ -1,2 +1,1 @@
-# website-template
-basic website with no content
+This website has nothing on it, you can use it as a start or as a guide idc, good luck
