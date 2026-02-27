@@ -1,0 +1,297 @@
+/* =============================================
+   RESET
+============================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* =====================================================================================
+ALL HEX CODES AND RGP VALUES HAVE NUMBERS AND SHOULD BE CHANGED TO FIT WHAT YOU'RE DOING
+========================================================================================
+   BODY
+============================================= */
+body {
+    background-image: url(Image goes here);
+    background-color: #1a0033;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Courier New', georgia;
+    color: #e9d5ff;
+    min-height: 100vh;
+}
+/*======================
+  Container for full page 
+  =======================*/
+
+.container-single {
+    max-width: 1400px;
+    width: 95%;
+    margin: 30px auto;
+}
+
+/* =============================================
+   HEADER IFRAME
+============================================= */
+#header-frame {
+    width: 100%;
+    height: 58px;
+    border: none;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* =============================================
+   MAIN CONTAINER
+============================================= */
+.container {
+    max-width: 1400px;
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+}
+
+.col-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.col-right {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =============================================
+   CONTENT BOXES
+============================================= */
+main, .profile-section {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(124, 58, 237, 0.03) 10px,
+        rgba(124, 58, 237, 0.03) 20px
+    );
+    background-color: rgba(26, 0, 51, 0.95);
+    background-attachment: fixed;
+    padding: 20px;
+    border: 2px solid #a855f7;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #7c3aed, inset 0 0 20px rgba(124, 58, 237, 0.2);
+    transition: all 0.3s ease-out;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+main:hover, .profile-section:hover {
+    background-color: rgba(26, 0, 51, 0.98);
+    box-shadow: 0 0 30px #a855f7, inset 0 0 30px rgba(168, 85, 247, 0.3);
+    transform: scale(1.01);
+}
+
+/* =============================================
+   HEADINGS
+============================================= */
+h1 {
+    font-size: 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: #a855f7;
+    line-height: 80px;
+    animation: glow 2s ease-in-out infinite alternate, cardFlip 0.8s ease-out backwards;
+    -webkit-text-stroke: 2px #5b21b6;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+h2, .section-heading {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: 0 0 5px #000;
+    border-radius: 8px 8px 0 0;
+    padding: 12px;
+    letter-spacing: 1px;
+    margin: -20px -20px 15px -20px;
+}
+
+h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #a855f7;
+    text-shadow: 0 0 5px #7c3aed;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 15px 0 10px 0;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* =============================================
+   LINKS
+============================================= */
+a {
+    color: #c084fc;
+    text-shadow: 0 0 3px #a855f7;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px #ffff00;
+}
+
+/* =============================================
+   DETAILS TABLE
+============================================= */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details-table td {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(91, 33, 182, 0.2) 100%);
+    color: #e9d5ff;
+    padding: 10px;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+    font-size: 13px;
+}
+
+.details-table td:first-child {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(91, 33, 182, 0.4) 100%);
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    width: 40%;
+}
+
+/* =============================================
+   LINKS LIST
+============================================= */
+.links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.links-list li {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(91, 33, 182, 0.2) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.links-list li:hover {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.4) 0%, rgba(91, 33, 182, 0.4) 100%);
+    border-color: #a855f7;
+}
+
+/* =============================================
+   ANIMATIONS
+============================================= */
+@keyframes glow {
+    from { text-shadow: 0 0 10px #7c3aed, 0 0 20px #5b21b6, 0 0 30px #a855f7; }
+    to { text-shadow: 0 0 20px #7c3aed, 0 0 30px #5b21b6, 0 0 40px #a855f7, 0 0 50px #c084fc; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardFlip {
+    from { opacity: 0; transform: rotateY(90deg); }
+    to { opacity: 1; transform: rotateY(0); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* =============================================
+   CUSTOM SCROLLBAR
+============================================= */
+::-webkit-scrollbar { width: 8px; }
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #1a0033 0%, #330066 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #7c3aed 0%, #5b21b6 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #a855f7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #a855f7 0%, #ffff00 100%);
+    box-shadow: 0 0 15px #ffff00;
+}
+
+/* =============================================
+   FLOATING CARD SUITS
+============================================= */
+.floating-cards {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-cards::before {
+    content: "♠";
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    font-size: 40px;
+    color: #a855f7;
+    opacity: 0.3;
+    animation: sparkle 3s infinite;
+    text-shadow: 0 0 20px #a855f7;
+}
+
+.floating-cards::after {
+    content: "♥";
+    position: fixed;
+    top: 60%;
+    right: 10%;
+    font-size: 40px;
+    color: #7c3aed;
+    opacity: 0.3;
+    animation: sparkle 4s infinite 1s;
+    text-shadow: 0 0 20px #7c3aed;
+}
+
+/* =============================================
+   RESPONSIVE LAYOUT
+============================================= */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    .col-left, .col-right {
+        width: 100%;
+    }
+}
